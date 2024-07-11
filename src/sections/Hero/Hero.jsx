@@ -1,4 +1,4 @@
-import styles from "./HeroStyles.module.css";
+import styles from "./HeroStyles.module.scss";
 import heroImg from "../../assets/Rafael_A_AI-2-bg.png";
 import sun from "../../assets/sun.svg";
 import moon from "../../assets/moon.svg";

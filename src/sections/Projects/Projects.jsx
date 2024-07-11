@@ -1,4 +1,4 @@
-import styles from "./ProjectsStyles.module.css";
+import styles from "./ProjectsStyles.module.scss";
 import viberr from "../../assets/viberr.png";
 import freshBurger from '../../assets/fresh-burger.png';
 import ProjectCard from "../../common/ProjectCard";
