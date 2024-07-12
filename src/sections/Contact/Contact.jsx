@@ -1,5 +1,10 @@
 import styles from "./ContactStyles.module.scss";
 
+/**
+ * Contact component renders a contact form.
+ *
+ * @returns {JSX.Element} A section containing the contact form for user input.
+ */
 function Contact() {
   return (
     <section id="contact" className={styles.container}>
@@ -22,7 +27,7 @@ function Contact() {
             Email
           </label>
           <input
-            type="text"
+            type="email"
             name="email"
             id="email"
             placeholder="Email"
@@ -30,7 +35,7 @@ function Contact() {
           />
         </div>
         <div className="formGroup">
-          <label htmlFor="email" hidden>
+          <label htmlFor="message" hidden>
             Message
           </label>
           <textarea

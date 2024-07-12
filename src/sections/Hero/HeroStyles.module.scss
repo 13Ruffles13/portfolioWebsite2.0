@@ -1,101 +1,120 @@
+// Main container for the Hero section
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-  text-align: center;
-  height: 100dvh;
-  min-width: 500px;
+  display: flex; // Use flexbox for layout
+  flex-direction: column; // Stack elements vertically
+  justify-content: center; // Center items vertically
+  gap: 20px; // Space between child elements
+  text-align: center; // Center text
+  height: 100dvh; // Full viewport height (dynamic)
+  padding: 20px; // Padding around the container
+  min-width: 320px; // Minimum width for responsiveness
 
+  // Styles for the hero image
   .hero {
-    max-width: 200px;
+    max-width: 60%; // Maximum width relative to the container
+    margin: 0 auto; // Center image horizontally
   }
 
+  // Styles for the social media icons container
   span {
-    display: flex;
-    gap: 25px;
-    justify-content: center;
+    display: flex; // Use flexbox for horizontal layout
+    gap: 20px; // Space between icons
+    justify-content: center; // Center icons
 
     a {
-      margin: 0;
+      margin: 0; // Remove default margin
 
       img {
-        width: 30px;
+        width: 30px; // Icon width
       }
     }
   }
 
+  // Styles for links within the container
   a {
-    width: fit-content;
-    align-self: center;
+    width: fit-content; // Adjust width based on content
+    align-self: center; // Center link horizontally
   }
 
+  // Styles for the resume button
   button {
-    background-color: var(--btn-color);
-    color: var(--btn-text-color);
-    border: none;
-    border-radius: 20px;
-    width: 126px;
-    height: 50px;
-    font-size: 20px;
-    font-weight: bold;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
-  }
+    background-color: var(--btn-color); // Background color from CSS variable
+    color: var(--btn-text-color); // Text color from CSS variable
+    border: none; // Remove default border
+    border-radius: 20px; // Rounded corners
+    width: clamp(100px, 20vw, 126px); // Responsive width
+    height: clamp(40px, 8vw, 50px); // Responsive height
+    font-size: clamp(16px, 4vw, 20px); // Responsive font size
+    font-weight: bold; // Bold text
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); // Shadow for depth
+    transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out; // Smooth transitions
 
-  button:hover {
-    transform: scale(1.05);
-  }
+    // Hover effect for the button
+    &:hover {
+      transform: scale(1.05); // Slightly scale up on hover
+    }
 
-  button:active {
-    transform: translateY(2px);
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
-  }
-}
-
-.colorModeContainer {
-  position: relative;
-}
-
-.colorMode {
-  position: absolute;
-  right: 0;
-  width: 25px;
-}
-
-.colorMode:hover {
-  cursor: pointer;
-}
-
-.description {
-  max-width: 24ch;
-  align-self: center;
-}
-
-.info {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-@media (width >= 800px) {
-  .container {
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-evenly;
-
-    .hero {
-      max-width: 350px;
-      width: 350px;
+    // Active effect for the button
+    &:active {
+      transform: translateY(2px); // Move down on click
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25); // Change shadow on click
     }
   }
 }
 
-@media (width >= 1400px) {
+// Container for the color mode toggle
+.colorModeContainer {
+  position: relative; // Positioning context for absolute elements
+}
+
+// Styles for the color mode icon
+.colorMode {
+  position: absolute; // Position it absolutely within the container
+  right: 0rem; // Align to the right
+  width: 25px; // Width of the icon
+  top: 1rem; // Vertical position
+
+  // Cursor change on hover
+  &:hover {
+    cursor: pointer; // Change cursor to pointer on hover
+  }
+}
+
+// Styles for the description text
+.description {
+  max-width: 60%; // Limit width for readability
+  align-self: center; // Center text horizontally
+}
+
+// Info section styling
+.info {
+  display: flex; // Use flexbox for layout
+  flex-direction: column; // Stack items vertically
+  gap: 20px; // Space between items
+}
+
+// Media query for screens wider than 800px
+@media (min-width: 800px) {
+  .container {
+    flex-direction: row-reverse; // Arrange items in a row, reversing order
+    align-items: center; // Center items vertically
+    justify-content: space-evenly; // Evenly distribute space
+
+    .hero {
+      max-width: 350px; // Adjust max width for larger screens
+    }
+
+    .colorMode {
+      right: 0rem; // Keep position on the right
+    }
+  }
+}
+
+// Media query for extra-large screens
+@media (min-width: 1400px) {
   .container {
     .hero {
-      max-width: 400px;
-      width: 400px;
+      max-width: 400px; // Further increase max width for very large screens
     }
   }
 }

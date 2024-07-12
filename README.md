@@ -1,8 +1,29 @@
-# React + Vite
+# Rafael Alvarado's Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio! This project showcases my skills, projects, and experiences as a software developer. Built using modern web technologies, this portfolio is both responsive and visually appealing.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React**: A JavaScript library for building user interfaces.
+- **Vite**: A fast and lightweight development server and build tool.
+- **SCSS**: A CSS preprocessor for writing modular and maintainable styles.
+- **npm**: A package manager for JavaScript to manage project dependencies.
+- **Netlify**: A platform for deploying web projects effortlessly.
+
+## Features
+
+- **Responsive Design**: Optimized for both desktop and mobile views.
+- **Theme Toggle**: Light and dark mode for better user experience.
+- **Project Showcase**: Highlighting selected projects with links and descriptions.
+- **Skills Section**: Listing technical skills with visual indicators.
+- **Contact Form**: Easy way to reach out for collaboration or inquiries.
+
+## Getting Started
+
+To run this project locally, follow these steps:
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/13Ruffles13/portfolioWebsite2.0.git
+   cd portfolioWebsite2.0
+   ```

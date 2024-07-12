@@ -1,8 +1,16 @@
+// Footer container styles
 .container {
-  text-align: center;
+  text-align: center; // Center-align text within the footer
+  padding: 20px; // Added padding for better spacing
 
+  // Styles for paragraph elements inside the footer
   p {
-    font-size: 16px;
-    color: var(--footer-text-color);
+    font-size: clamp(
+      14px,
+      2vw + 1rem,
+      18px
+    ); // Responsive font size that adjusts with viewport width
+    color: var(--footer-text-color); // Use a CSS variable for text color
+    margin: 0; // Removed default margin for better control over spacing
   }
 }

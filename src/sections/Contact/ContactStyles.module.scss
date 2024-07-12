@@ -1,80 +1,92 @@
+// Container for the contact section
 .container {
-  display: flexbox;
-  flex-direction: column;
-  text-align: center;
+  display: flex; // Use flexbox layout
+  flex-direction: column; // Arrange children in a column
+  text-align: center; // Center text alignment
+  padding: 20px; // Padding around the container
 }
 
+// Styles for the form element
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  display: flex; // Use flexbox for form layout
+  flex-direction: column; // Arrange form elements in a column
+  gap: 30px; // Space between form elements
 }
 
+// General styles for textarea and input fields (excluding submit button)
 textarea,
 input:not([type="submit"]) {
-  height: 50px;
-  padding-left: 16px;
-  width: 250px;
+  height: 50px; // Set height for input fields
+  padding-left: 16px; // Add padding to the left
+  width: 250px; // Default width for smaller screens
 }
 
+// Specific styles for textarea
 textarea {
-  padding-top: 16px;
-  resize: none;
-  height: 250px;
+  padding-top: 16px; // Padding at the top
+  resize: none; // Disable resizing
+  height: 250px; // Height for textarea
 }
 
+// Base styles for all input and textarea elements
 input,
 textarea {
-  border-radius: 20px;
-  border: #888 1px solid;
-  box-sizing: border-box;
-  justify-self: center;
-  background-color: var(--background-color);
-  color: var(--form-text-color);
+  border-radius: 20px; // Rounded corners
+  border: #888 1px solid; // Border color and width
+  box-sizing: border-box; // Include padding in width/height
+  justify-self: center; // Center alignment in grid layout
+  background-color: var(--background-color); // Background color variable
+  color: var(--form-text-color); // Text color variable
 }
 
+// Placeholder text color
 ::placeholder {
-  color: var(--form-text-color);
+  color: var(--form-text-color); // Use form text color for placeholders
 }
 
+// Styles for the submit button
 input[type="submit"] {
-  background-color: var(--btn-color);
-  color: var(--btn-text-color);
-  border: none;
-  border-radius: 20px;
-  width: 126px;
-  height: 50px;
-  font-size: 20px;
-  font-weight: bold;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
-  margin: auto;
+  background-color: var(--btn-color); // Button background color
+  color: var(--btn-text-color); // Button text color
+  border: none; // Remove default border
+  border-radius: 20px; // Rounded corners
+  width: 126px; // Fixed width for button
+  height: 50px; // Fixed height for button
+  font-size: 20px; // Font size for button text
+  font-weight: bold; // Bold font weight
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); // Shadow effect
+  transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out; // Smooth transitions
+  margin: auto; // Center the button horizontally
 }
 
+// Hover effect for the submit button
 input[type="submit"]:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); // Slightly scale up on hover
 }
 
+// Active effect for the submit button
 input[type="submit"]:active {
-  transform: translateY(2px);
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  transform: translateY(2px); // Move button down on click
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25); // Change shadow on click
 }
 
-@media (width >= 800px) {
+// Media query for larger screens
+@media (min-width: 800px) {
   textarea,
   input:not([type="submit"]) {
-    width: 600px;
-    font-size: 20px;
+    width: 600px; // Increase width on larger screens
+    font-size: 20px; // Adjust font size
   }
 
   form {
-    gap: 40px;
+    gap: 40px; // Increase gap between form elements
   }
 }
 
-@media (width >= 1400px) {
+// Media query for extra-large screens
+@media (min-width: 1400px) {
   textarea,
   input:not([type="submit"]) {
-    width: 800px;
+    width: 800px; // Further increase width on extra-large screens
   }
 }

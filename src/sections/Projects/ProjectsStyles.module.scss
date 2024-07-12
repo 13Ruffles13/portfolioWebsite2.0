@@ -1,39 +1,81 @@
+// Main container styles for the Projects section
 .container {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+  display: flex; // Use flexbox for layout
+  flex-direction: column; // Stack elements vertically
+  text-align: center; // Center-align text
+  padding: 20px; // Added padding for better spacing
 
+  // Styles for images within the container
   img {
-    max-width: 250px;
-    align-self: center;
-    background-color: var(--project-card-bg);
-    border-radius: 20px;
+    width: 100%; // Full width of the container
+    max-width: 250px; // Ensures images are of equal size
+    height: auto; // Maintain aspect ratio
+    align-self: center; // Center image horizontally
+    background-color: var(
+      --project-card-bg
+    ); // Background color from CSS variable
+    border-radius: 20px; // Rounded corners for images
+    object-fit: cover; // Ensures images cover the given space crisply
   }
 
+  // Styles for links
   a {
-    width: fit-content;
-    text-decoration: none;
-    color: #222;
-    transition: transform 200ms ease-in-out;
+    width: fit-content; // Adjust width based on content
+    text-decoration: none; // Remove underline from links
+    color: #222; // Text color for links
+    transition: transform 200ms ease-in-out; // Smooth scaling effect on hover
   }
 
+  // Hover effect for links
   a:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); // Slightly scale up on hover
   }
 }
 
+// Container for individual project cards
 .projectsContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
+  display: flex; // Use flexbox for layout
+  flex-direction: column; // Stack project cards vertically
+  align-items: center; // Center items
+  gap: 20px; // Space between items, reduced for smaller screens
+
+  // Responsive gap adjustments
+  @media (min-width: 600px) {
+    gap: 30px; // Increased gap for larger screens
+  }
+
+  // Flexbox adjustments for larger screens
+  @media (min-width: 800px) {
+    flex-direction: row; // Arrange items in a row
+    flex-wrap: wrap; // Allow wrapping of items
+    justify-content: space-evenly; // Evenly distribute space
+    padding: 0 30px; // Horizontal padding
+  }
 }
 
-@media (width >= 800px) {
-  .projectsContainer {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 0 30px;
+// Media query for screens wider than 600px
+@media (min-width: 600px) {
+  .container {
+    img {
+      max-width: 200px; // Adjust max-width for better fit on smaller screens
+    }
+  }
+}
+
+// Media query for screens wider than 800px
+@media (min-width: 800px) {
+  .container {
+    img {
+      max-width: 250px; // Increase max-width for larger screens
+    }
+  }
+}
+
+// Media query for very large screens
+@media (min-width: 1200px) {
+  .container {
+    img {
+      max-width: 300px; // Further increase max-width for very large screens
+    }
   }
 }

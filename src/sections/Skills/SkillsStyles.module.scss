@@ -1,47 +1,81 @@
+// Main container styles for the Skills section
 .container {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+  display: flex; // Use flexbox for layout
+  flex-direction: column; // Stack elements vertically
+  text-align: center; // Center-align text
+  padding: 20px; // Padding for spacing
 
+  // Styling for span elements within the container
   span {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+    display: flex; // Use flexbox for alignment
+    align-items: center; // Center items vertically
+    gap: 5px; // Space between items
   }
 
+  // Styling for images in the span
   img {
-    width: 20px;
+    width: 20px; // Fixed width for checkmark icons
   }
 }
 
+// Styles for the skill lists
 .skillList {
-  display: flex;
-  justify-content: space-evenly;
-  align-self: center;
-  flex-wrap: wrap;
-  row-gap: 40px;
-  max-width: 26ch;
+  display: flex; // Use flexbox for layout
+  justify-content: space-evenly; // Evenly distribute skill items
+  align-self: center; // Center the list horizontally
+  flex-wrap: wrap; // Allow wrapping of items
+  row-gap: 40px; // Vertical space between rows
+  max-width: 100%; // Full width of the container
+  padding: 0 10px; // Horizontal padding
+
+  // Styles for each skill item
+  & > * {
+    flex: 1 1 calc(20% - 20px); // Responsive flex properties
+    max-width: 200px; // Limit maximum width
+    margin: 0 10px; // Horizontal margin between items
+  }
 }
 
+// Styles for horizontal rules
 hr {
-  width: 100px;
-  height: 1px;
-  border: none;
-  background-color: var(--text-color);
-  margin: 30px auto;
+  width: 100px; // Default width of the horizontal line
+  height: 1px; // Height of the line
+  border: none; // Remove default border
+  background-color: var(--text-color); // Use color from CSS variable
+  margin: 30px auto; // Center horizontally with vertical spacing
 }
 
-@media (width >= 800px) {
+// Media query for screens wider than 600px
+@media (min-width: 600px) {
   .skillList {
-    max-width: fit-content;
-    gap: 30px;
+    max-width: fit-content; // Adjust max-width to fit content
+    gap: 20px; // Adjust gap between items
 
+    // Styling for paragraphs within the skill list
     p {
-      font-size: 20px;
+      font-size: clamp(16px, 2vw + 1rem, 20px); // Responsive font size
     }
 
+    // Adjust horizontal rule width
     hr {
-      width: 300px;
+      width: 200px; // Wider line for medium screens
+    }
+  }
+}
+
+// Media query for screens wider than 800px
+@media (min-width: 800px) {
+  .skillList {
+    justify-content: space-evenly; // Use space-evenly on larger screens
+
+    // Adjust font size for paragraphs on larger screens
+    p {
+      font-size: clamp(18px, 2vw + 1rem, 22px); // Slightly larger font size
+    }
+
+    // Further adjust horizontal rule width
+    hr {
+      width: 300px; // Wider line for larger screens
     }
   }
 }

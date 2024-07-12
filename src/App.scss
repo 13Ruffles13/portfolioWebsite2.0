@@ -1,112 +1,117 @@
 :root {
-  --background-color: #fff;
-  --btn-color: #0987f2;
-  --btn-text-color: #fff;
-  --project-card-bg: #ffffff00;
-  --text-color: #222;
-  --form-text-color: #555;
-  --footer-text-color: #888;
+  // Define CSS variables for light theme colors
+  --background-color: #fff; // Background color for light theme
+  --btn-color: #0987f2; // Button color
+  --btn-text-color: #fff; // Button text color
+  --project-card-bg: rgba(255, 255, 255, 0); // Background for project cards
+  --text-color: #222; // Default text color
+  --form-text-color: #555; // Text color for form elements
+  --footer-text-color: #888; // Text color for footer
 }
 
 [data-theme="dark"] {
-  --background-color: #222;
-  --btn-color: #fff;
-  --btn-text-color: #222;
-  --project-card-bg: #fff;
-  --text-color: #fff;
-  --form-text-color: #fff;
-  --footer-text-color: #bbb;
+  // Define CSS variables for dark theme colors
+  --background-color: #222; // Background color for dark theme
+  --btn-color: #fff; // Button color for dark theme
+  --btn-text-color: #222; // Button text color for dark theme
+  --project-card-bg: #fff; // Background for project cards in dark theme
+  --text-color: #fff; // Default text color for dark theme
+  --form-text-color: #fff; // Text color for form elements in dark theme
+  --footer-text-color: #bbb; // Text color for footer in dark theme
 }
 
 body {
-  background-color: var(--background-color);
-  display: flex;
-  justify-content: center;
-  margin: 0 auto 60px;
+  background-color: var(--background-color); // Set body background color
+  display: flex; // Use flexbox for layout
+  justify-content: center; // Center content horizontally
+  margin: 0 auto 60px; // Set margins
 }
 
 #root {
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
+  display: flex; // Use flexbox for layout of root element
+  flex-direction: column; // Stack children vertically
+  gap: 60px; // Space between sections
 }
 
 h1,
 h2,
 h3,
 p {
-  color: var(--text-color);
-  margin: 0;
-  padding: 0;
+  color: var(--text-color); // Set text color from variables
+  margin: 0; // Reset default margins
+  padding: 0; // Reset default padding
 }
 
+// Font styles for headings and paragraphs
 h2,
 h3,
 p {
-  font-family: "Roboto Mono", monospace;
+  font-family: "Roboto Mono", monospace; // Set font family
 }
 
 h1,
 h2 {
-  text-transform: uppercase;
+  text-transform: uppercase; // Uppercase for headings
 }
 
 h2,
 h3 {
-  font-size: 20px;
+  font-size: 20px; // Base font size for h2 and h3
 }
 
 h1 {
-  font-family: "Rubik", sans-serif;
-  font-size: 32px;
+  font-family: "Rubik", sans-serif; // Different font for h1
+  font-size: 32px; // Base font size for h1
 }
 
 p {
-  font-size: 16px;
-  font-weight: 300;
+  font-size: 16px; // Base font size for paragraphs
+  font-weight: 300; // Light font weight
 }
 
 .sectionTitle {
-  margin-bottom: 30px;
+  margin-bottom: 30px; // Spacing below section titles
 }
 
 .hover {
-  cursor: pointer;
+  cursor: pointer; // Pointer cursor for hoverable elements
 }
 
+// Media query for screens wider than 800px
 @media (width >= 800px) {
   #root {
-    gap: 100px;
+    gap: 100px; // Increased gap for larger screens
   }
 
   h1 {
-    font-size: 40px;
+    font-size: 40px; // Larger font size for h1
   }
 
   h2,
   h3 {
-    font-size: 24px;
+    font-size: 24px; // Larger font size for h2 and h3
   }
 
   p {
-    font-size: 20px;
+    font-size: 20px; // Larger font size for paragraphs
   }
 
   .sectionTitle {
-    margin-bottom: 60px;
+    margin-bottom: 60px; // Increased margin for section titles
   }
 }
 
-@media (width >= 1400px) {
+// Media query for screens wider than 1400px
+@media (min-width: 1400px) {
   #root {
-    gap: 200px;
+    gap: 200px; // Further increased gap for very large screens
   }
 
   h1 {
-    font-size: 48px;
+    font-size: 48px; // Even larger font size for h1
   }
 
   .sectionTitle {
-    margin-bottom: 75px;
+    margin-bottom: 75px; // Further increased margin for section titles
   }
 }

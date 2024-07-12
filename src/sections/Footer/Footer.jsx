@@ -1,5 +1,10 @@
 import styles from "./FooterStyles.module.scss";
 
+/**
+ * Footer component displays the copyright information.
+ *
+ * @returns {JSX.Element} A section containing copyright details.
+ */
 function Footer() {
   return (
     <section id="footer" className={styles.container}>
