@@ -1,6 +1,10 @@
 # Rafael Alvarado's Portfolio
 
-Welcome to my personal portfolio! This project showcases my skills, projects, and experiences as a software developer. Built using modern web technologies, this portfolio is both responsive and visually appealing.
+Welcome to my personal portfolio! This project highlights my skills, projects, and experiences as a software developer. Crafted with modern web technologies, it offers a responsive and visually appealing user experience.
+
+Feel free to explore my work and learn more about my journey in software development.
+
+[View My Portfolio](https://rafael-alvarado.netlify.app/)
 
 ## Tech Stack
 
