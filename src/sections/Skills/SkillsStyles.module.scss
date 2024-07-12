@@ -26,7 +26,7 @@
   flex-wrap: wrap; // Allow wrapping of items
   row-gap: 40px; // Vertical space between rows
   max-width: 100%; // Full width of the container
-  padding: 0 10px; // Horizontal padding
+  padding: 10px 10px; // Padding
 
   // Styles for each skill item
   & > * {
