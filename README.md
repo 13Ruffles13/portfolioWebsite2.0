@@ -8,11 +8,12 @@ Feel free to explore my work and learn more about my journey in software develop
 
 ## Tech Stack
 
-- **React**: A JavaScript library for building user interfaces.
-- **Vite**: A fast and lightweight development server and build tool.
-- **SCSS**: A CSS preprocessor for writing modular and maintainable styles.
-- **npm**: A package manager for JavaScript to manage project dependencies.
-- **Netlify**: A platform for deploying web projects effortlessly.
+- **React**: A powerful JavaScript library for creating dynamic user interfaces.
+- **Vite**: An ultra-fast build tool and development server for modern web projects.
+- **SCSS**: A CSS preprocessor that enables modular and maintainable styling.
+- **npm**: A popular package manager for JavaScript that simplifies dependency management.
+- **Netlify**: A seamless platform for deploying and hosting web applications with ease.
+- **Formspree**: A straightforward API for handling form submissions using simple HTML.
 
 ## Features
 
